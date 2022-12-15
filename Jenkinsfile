@@ -13,7 +13,8 @@ pipeline{
 			steps{
 				echo "Unit Tests"
 				//sh("returnStatus:true,script:'.~/.bashrc \n pyenv version')
-				sh('bash /var/lib/jenkins/workspace/PipelineJobUnitTests/test.sh')
+				//sh('chmod +x /var/lib/jenkins/workspace/PipelineJobUnitTests/jenkinsscript.sh')
+				sh('bash /var/lib/jenkins/workspace/PipelineJobUnitTests/jenkinsscript.sh')
 			}
 		}
 		stage("Publish Junit report"){
